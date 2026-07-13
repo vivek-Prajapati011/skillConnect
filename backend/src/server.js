@@ -1,9 +1,7 @@
 import app from "./app.js"
-dotenv.config()
+import config from "./config/env.js";
 
 
-const PORT = 3000
-
-app.listen(process.env.PORT, () => {
-    console.log(`🚀 Server is running on port ${PORT}`)
+app.listen(config.port, () => {
+    console.log(`🚀  Server is running on port ${config.port} in ${config.nodeEnv} mode`)
 });
